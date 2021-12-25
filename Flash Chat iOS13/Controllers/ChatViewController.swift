@@ -14,25 +14,17 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
-<<<<<<< HEAD
+
     let db = Firestore.firestore()
     
     var messages: [Messages] = []
-=======
-    var messages: [Messages] = [
-      Messages(sender: "1@2.de", body: "Hi"),
-      Messages(sender: "2@3.de", body: "Hey"),
-      Messages(sender: "1@2.de", body: "What's up?")
-    ]
->>>>>>> 68dfdd19f4af45055921348f04d85a7217617d4d
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
-<<<<<<< HEAD
         
         loadMessages()
     }
@@ -58,8 +50,6 @@ class ChatViewController: UIViewController {
                 }
             }
         }
-=======
->>>>>>> 68dfdd19f4af45055921348f04d85a7217617d4d
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -96,13 +86,6 @@ extension ChatViewController: UITableViewDataSource {
         as! MessageCell
         cell.label.text = messages[indexPath.row].body
         return cell
-<<<<<<< HEAD
-    }
-=======
-        
-    }
-    
-    
->>>>>>> 68dfdd19f4af45055921348f04d85a7217617d4d
-}
 
+    }
+    }

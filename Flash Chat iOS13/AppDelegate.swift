@@ -16,11 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-<<<<<<< HEAD
+
         let db = Firestore.firestore()
         print(db)
-=======
->>>>>>> 68dfdd19f4af45055921348f04d85a7217617d4d
+
         return true
     }
 
